@@ -4,12 +4,12 @@ Desafio do curso **Go Expert**. Sistema em Go que recebe um CEP, descobre a cida
 
 ## URL (Cloud Run)
 
-> **TODO:** preencher após o deploy — ex: `https://desafio-cloudrun-xxxxx.run.app`
+**https://desafio-cloudrun-329065667660.us-central1.run.app**
 
 Exemplo de uso:
 
 ```sh
-curl https://SUA_URL.run.app/01001000
+curl https://desafio-cloudrun-329065667660.us-central1.run.app/01001000
 ```
 
 ## Contrato
