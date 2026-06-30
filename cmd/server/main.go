@@ -31,6 +31,11 @@ func main() {
 	mux.HandleFunc("GET /health", func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusOK)
 	})
+	// Raiz com instrução de uso (evita 404 ao abrir a URL base no navegador).
+	mux.HandleFunc("GET /{$}", func(w http.ResponseWriter, r *http.Request) {
+		w.Header().Set("Content-Type", "application/json")
+		w.Write([]byte(`{"usage":"GET /{cep} — ex: /01001000"}` + "\n"))
+	})
 
 	log.Printf("servidor rodando na porta %s", port)
 	if err := http.ListenAndServe(":"+port, mux); err != nil {
