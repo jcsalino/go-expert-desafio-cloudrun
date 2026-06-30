@@ -55,7 +55,7 @@ curl http://localhost:8080/01001000
 ## Deploy no Cloud Run
 
 ```sh
-gcloud run deploy desafio-cloudrun \
+gcloud run deploy {PROJECT_ID} \
   --source . \
   --region us-central1 \
   --allow-unauthenticated \
